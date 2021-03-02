@@ -3,6 +3,7 @@ import java.io.*;
 import javax.swing.*;
 public class visualize
 {
+	
 	public static void main(String args[])
 	{
 		JFrame frame= new JFrame("visualize");
