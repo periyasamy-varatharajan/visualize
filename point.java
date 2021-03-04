@@ -8,12 +8,26 @@ public class point
 		this.y=y;
 		this.z=z;
 		r=Math.sqrt(x*x+y*y+z*z);
-		t=Math.atan(Math.sqrt(x*x+y*y)/z);
-		a=Math.atan(y/x);
+		if(z==0)
+		{
+			t=1.5708;
+		}
+		else
+		{
+			t=Math.atan(Math.sqrt(x*x+y*y)/z);
+		}
+		if(x==0)
+		{
+			a=1.5708;
+		}
+		else
+		{
+			a=Math.atan(y/x);
+		}
 	}
 	public static void main(String args[])
 	{
-		point p=new point(1,2,3);
+		point p=new point(1,0,0);
 		System.out.println(p.r);
 		System.out.println(Math.toDegrees(p.t));
 		System.out.println(Math.toDegrees(p.a));
