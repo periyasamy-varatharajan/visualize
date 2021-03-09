@@ -73,7 +73,11 @@ public class test
 	
 	public static void main(String args[])throws Exception
 	{
-		//testpoint();
+		if(args[0].equals("point"))
+		testpoint();
+		else 
+		System.out.println(args[0]);
+		if(args[0].equals("line"))
 		testline();
 	}
 }

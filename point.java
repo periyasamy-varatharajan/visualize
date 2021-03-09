@@ -1,3 +1,5 @@
+import java.awt.*;
+import java.awt.image.*;
 public class point
 {
 	double x,y,z,r,t,a;
@@ -24,6 +26,11 @@ public class point
 		{
 			a=Math.atan(y/x);
 		}
+	}
+	public void drawpoint(BufferedImage bi)
+	{
+		Graphics g=bi.createGraphics();
+		g.drawString("point added",(int)x,(int)y);
 	}
 	public static void main(String args[])
 	{

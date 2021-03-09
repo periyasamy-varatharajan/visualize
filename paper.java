@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.*;
+
 import java.io.*;
 public class paper extends JPanel
 {
@@ -9,7 +10,7 @@ public class paper extends JPanel
 	public void addpoint(point p)
 	{	
 		//im.drawString("testing",25,25);
-		bi.setRGB((int)p.x,(int)p.y,-1);
+		p.drawpoint(bi);
 	}
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
@@ -27,6 +28,7 @@ public class paper extends JPanel
 		z1=(int)l.p1.z;
 		z2=(int)l.p2.z;
 		System.out.println("addline working");
+		l.drawline(bi);
 		bi.setRGB(400,400,-1);
 	}
 	
