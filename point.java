@@ -29,8 +29,9 @@ public class point
 	}
 	public void drawpoint(BufferedImage bi)
 	{
-		Graphics g=bi.createGraphics();
-		g.drawString("point added",(int)x,(int)y);
+		//Graphics g=bi.createGraphics();
+		//g.drawString("point added",(int)x,(int)y);
+		bi.setRGB((int)this.x,(int)this.y,-1);
 	}
 	public static void main(String args[])
 	{
