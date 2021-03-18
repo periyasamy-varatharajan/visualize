@@ -6,7 +6,7 @@ public class line
 {
 	point p1,p2;
 	float mzx,myx,c,cy,dx,dy,dz;
-	float x1,x2,y1,y2,z1,z2;
+	float x1,x2,y1,y2,z1,z2,cz;
 	public line(int x1,int y1,int z1,int x2,int y2,int z2)
 	{
 		p1=new point(x1,y1,z1);
@@ -17,7 +17,8 @@ public class line
 		mzx=dz/dx;
 		myx=dy/dx;
 		//mzy=
-		cy=this.y1-myx*x1;
+		cy=y1-(myx*x1);
+		cz=z1-(mzx*x1);
 		c=z1-mzx*x1-myx*y1;
 	}
 	public void drawline(BufferedImage bi)
@@ -29,7 +30,7 @@ public class line
 		for  (int i=(int)this.p1.x;i<(int)this.p2.x;i++)
 		{
 			y=(int)(this.myx*i+cy);
-			z=(int)this.mzx*i;
+			z=(int)(this.mzx*i+cz);
 			System.out.println(i+" "+y+" "+z);
 			bi.setRGB(i,y,-1);
 			
