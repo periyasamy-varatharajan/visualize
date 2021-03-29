@@ -1,5 +1,9 @@
+package visualize;
 import java.io.*;
 import javax.swing.*;
+/**
+*class that is used for testing classes that are used in main class
+*/
 public class test
 {
 	//testing position on point 
@@ -30,7 +34,8 @@ public class test
 			//bi.flush();
 			z=Integer.parseInt(bi.readLine());
 			
-			p=new point(x,y,z);
+		
+		p=new point(x,y,z);
 			pa.addpoint(p);
 			pa.repaint();
 		}
@@ -73,11 +78,28 @@ public class test
 	
 	public static void main(String args[])throws Exception
 	{
-		if(args[0].equals("point"))
-		testpoint();
-		else 
-		System.out.println(args[0]);
-		if(args[0].equals("line"))
-		testline();
+		int choice=0;
+		BufferedReader bi=new BufferedReader(InputStreamReader(System.in));
+		while(true){
+			System.out.println("1.compile \n2.test \n3.exit");
+			System.out.flush();
+			choice=Integer.parseInt(bi.readLine())
+			if(choice==1)
+			{
+				Sytem.out.println("compile mode");
+			}
+			else if(choice==1)
+			{
+				System.out.println("testing mode");
+			}
+			else if(choice==2)
+			{
+				System.out.println("that all");
+			}
+			else{
+				System.out.println("oops")
+			}
+		}
+		System.out.println("the end")
 	}
 }

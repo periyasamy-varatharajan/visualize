@@ -1,8 +1,13 @@
+package visualize;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.*;
 
 import java.io.*;
+/**
+*paper is the main place where all the points,images,line will fall on this 
+*and finally this will reflect in screen
+*/
 public class paper extends JPanel
 {
 	BufferedImage bi=new BufferedImage(500,500,BufferedImage.TYPE_USHORT_GRAY);

@@ -1,6 +1,11 @@
 //this is the place for adding images
+
+package visualize;
 import java.io.*;
 import javax.swing.*;
+/**
+*main class 
+*/
 public class visualize
 {
 	
