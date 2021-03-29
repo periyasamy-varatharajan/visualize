@@ -1,0 +1,8 @@
+visulazie 
+	visulazie is created to study mathematical funtion used in machine learning exactly 
+	in neural network
+classes created
+	visulize
+		it is the main class 
+	line 
+		it is class that concerns line
